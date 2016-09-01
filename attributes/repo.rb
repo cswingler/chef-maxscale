@@ -20,14 +20,14 @@
 # Apt
 case node['platform']
 when 'ubuntu'
-  default['mariadb']['apt']['uri'] = 'https://downloads.mariadb.com/software/mariadb-maxscale/1.1/repo/ubuntu/'
+  default['mariadb']['apt']['uri'] = 'http://downloads.mariadb.com/files/MaxScale/1.4.3/ubuntu/'
 when 'debian'
   default['mariadb']['apt']['uri'] = 'https://downloads.mariadb.com/software/mariadb-maxscale/1.1/repo/debian/'
 end
 
 default['mariadb']['apt']['arch'] = 'amd64'
 default['mariadb']['apt']['components'] =  ['main']
-default['mariadb']['apt']['key'] = 'https://downloads.mariadb.com/software/mariadb-maxscale/1.1/Maxscale-GPG-KEY.public'
+default['mariadb']['apt']['key'] = 'https://downloads.mariadb.com/files/MaxScale/MariaDB-MaxScale-GPG-KEY'
 default['mariadb']['apt']['package'] = 'maxscale'
 
 # Yum
